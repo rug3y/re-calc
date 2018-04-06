@@ -14,6 +14,9 @@ class SquareLayout extends Component {
   handleClick(i) {
     let b = this.state.buffer;
     b += i;
+    while(b.charAt(0) === "0") {
+      b = b.substr(1);
+    }
     this.setState({buffer: b});
     console.log(this.state.buffer);
   }
