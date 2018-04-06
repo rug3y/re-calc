@@ -30,7 +30,9 @@ class SquareLayout extends Component {
     const b = this.state.buffer;
     // eslint-disable-next-line
     let result = eval(b);
-    this.setState({buffer: result});
+    if (result !== undefined) {
+      this.setState({buffer: result});
+    }
   }
 
   // Rendering helper functions
